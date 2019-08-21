@@ -2,4 +2,4 @@
 
 echo " -----> Run HTTP server."
 
-exec python -m SimpleHTTPServer 8080
+exec rabbitmqctl -n start_app 8080
