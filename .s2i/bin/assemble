@@ -1,6 +1,17 @@
 #!/bin/bash
 
 set -eo pipefail
+sudo yum install epel-release
+sudo yum update
+sudo reboot
+
+wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
+sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
+sudo yum install erlang
+
+wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.1/rabbitmq-server-3.6.1-1.noarch.rpm
+sudo rpm --import https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+sudo yum install rabbitmq-server-3.6.1-1.noarch.rpm
 
 # Move assemble/run scripts to new location.
 
