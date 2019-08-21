@@ -1,4 +1,4 @@
-FROM centos/python-36-centos7:latest
+FROM openshift/base-centos7
 
 LABEL io.k8s.description="Rabbitmq Server" \
       io.k8s.display-name="Rabbitmq Server" \
