@@ -1,32 +1,14 @@
 #!/bin/bash
 
+
 set -eo pipefail
-sudo yum install epel-release
-sudo yum update
-sudo reboot
 
-wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
-sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
-sudo yum install erlang
-
-wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.1/rabbitmq-server-3.6.1-1.noarch.rpm
-sudo rpm --import https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
-sudo yum install rabbitmq-server-3.6.1-1.noarch.rpm
 
 # Move assemble/run scripts to new location.
 
+
 mkdir /opt/app-root/s2i
 
+
+
 mv /tmp/src/* /opt/app-root/s2i
-
-# Override image metadata for builder image.
-
-mkdir -p /tmp/.s2i
-
-cat > /tmp/.s2i/rabbitmq-cluster-template.yaml << EOF
-{
-  "labels": [
-    { "io.openshift.s2i.scripts-url": "image:///opt/app-root/s2i" }
-  ]
-}
-EOF
