@@ -7,6 +7,8 @@
 FROM centos:centos7
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
+USER root
+
 LABEL io.k8s.description="Rabbitmq Server" \
 
       io.k8s.display-name="Rabbitmq Server" \
