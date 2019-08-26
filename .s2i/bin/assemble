@@ -9,4 +9,4 @@ set -eo pipefail
 
 
 
-mv /tmp/src/* /opt/app-root/s2i
+mv /tmp/src/* /opt/app-root/bin
