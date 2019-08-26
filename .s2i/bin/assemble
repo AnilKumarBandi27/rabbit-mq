@@ -3,7 +3,7 @@
 
 set -eo pipefail
 
-
+yum install -y sudo
 # Move assemble/run scripts to new location.
 
 
