@@ -8,5 +8,9 @@ set -eo pipefail
 
 
 
+mkdir /opt/app-root/s2i
 
-mv /tmp/src/* /opt/app-root/bin
+
+
+mv /tmp/src/* /opt/app-root/s2i
+
