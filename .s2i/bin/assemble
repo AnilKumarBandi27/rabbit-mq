@@ -6,8 +6,6 @@ set -eo pipefail
 
 # Move assemble/run scripts to new location.
 
-USER root
-mkdir /opt/app-root/s2i
 
 
 
