@@ -8,7 +8,7 @@ set -eo pipefail
 
 
 
-mkdir -p /opt/app-root/s2i
+sudo mkdir -p /opt/app-root/s2i
 
 
 
